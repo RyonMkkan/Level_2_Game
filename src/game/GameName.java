@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 public class GameName {
 	int width = 800;
-	int height = 38;
+	int height = 360;
 	JFrame frame = new JFrame();
 	GNGamePanel panel = new GNGamePanel();
 
@@ -17,10 +17,10 @@ public class GameName {
 	}
 
 	void setup() {
-
+        frame.add(panel);
 		frame.setVisible(true);
 		frame.setSize(width, height);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        frame.addKeyListener(panel);
 	}
 }
