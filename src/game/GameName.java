@@ -22,5 +22,6 @@ public class GameName {
 		frame.setSize(width, height);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.addKeyListener(panel);
+        
 	}
 }
