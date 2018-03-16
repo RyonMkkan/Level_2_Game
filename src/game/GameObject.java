@@ -26,7 +26,7 @@ public class GameObject {
 	
 	public void jump ( ) {
 		
-		y -= velocity*200;
+		y -= velocity*60;
 		System.out.println("X");
 		
 		
