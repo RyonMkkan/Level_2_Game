@@ -1,5 +1,6 @@
 package game;
 
+import java.awt.Color;
 import java.awt.Graphics; 
 
 public class GameObject {
@@ -10,7 +11,8 @@ public class GameObject {
     int width = 100;
 
     int height = 100;
-	
+	 
+    int velocity = 1;
 	
 	
 	GameObject(){
@@ -22,20 +24,35 @@ public class GameObject {
 		
 	}
 	
-	public void jump (int height ) {
-		y += height;
-		System.out.println(y);
+	public void jump ( ) {
+		
+		y -= velocity*200;
+		System.out.println("X");
+		
 		
 		
 	}
+	 
 	
 	void update() {
+		if (y< GameName.height - height) {
+			y+= velocity;
+			
+		}
 		
 		
-		
-	}
+//		if (y>= 0) {
+//			y += velocity;
+//			velocity--;	
+//		}
+//		else {
+//			y=200;
+//			velocity=2;
+		}
+	
     void draw(Graphics g) {
-    	System.out.println(x+" , "+y);
+    	
+    	g.setColor(new Color (0,0,0));
 		 g.fillRect(x, y, width, height);
 	}
 	

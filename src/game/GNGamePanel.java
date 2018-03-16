@@ -1,5 +1,6 @@
 package game;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,9 +29,11 @@ public class GNGamePanel extends JPanel implements ActionListener, KeyListener {
 	@Override
 
 	public void paintComponent(Graphics g) {
+		g.setColor(new Color(255,255,255));
+       g.fillRect(0, 0, 1000, 1000);
        
 		object.draw(g);
-		System.out.println("lll");
+	
 
 	}
 
@@ -40,7 +43,7 @@ public class GNGamePanel extends JPanel implements ActionListener, KeyListener {
 		
 		object.update();
 		repaint();
-		System.out.println("lol");
+		
 		
 		
 	}
@@ -49,8 +52,8 @@ public class GNGamePanel extends JPanel implements ActionListener, KeyListener {
 	public void keyPressed(KeyEvent arg0) {
 		// TODO Auto-generated method stub
 		if (arg0.getKeyCode() == KeyEvent.VK_UP) {
-			System.out.println("up");
-			object.jump(-50);
+			object.jump();
+			
 			
 
 		}
@@ -59,8 +62,9 @@ public class GNGamePanel extends JPanel implements ActionListener, KeyListener {
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
-
-	}
+		
+		}
+	
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {

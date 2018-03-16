@@ -3,8 +3,8 @@ package game;
 import javax.swing.JFrame;
 
 public class GameName {
-	int width = 800;
-	int height = 360;
+	static int width = 800;
+	static int height = 360;
 	JFrame frame = new JFrame();
 	GNGamePanel panel = new GNGamePanel();
 
