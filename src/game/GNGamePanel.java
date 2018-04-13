@@ -16,7 +16,7 @@ public class GNGamePanel extends JPanel implements ActionListener, KeyListener {
 	GameObject object;
    
 	GNGamePanel() {
-		time = new Timer(1000 / 60, this);
+		time = new Timer(100 / 60, this);
 		object = new GameObject();
         startGame();
 	}
@@ -33,8 +33,14 @@ public class GNGamePanel extends JPanel implements ActionListener, KeyListener {
        g.fillRect(0, 0, 1000, 1000);
        
 		object.draw(g);
+		
 	
 
+	}
+	void draw() {
+		repaint();
+		
+		
 	}
 
 	@Override
@@ -42,7 +48,7 @@ public class GNGamePanel extends JPanel implements ActionListener, KeyListener {
 		// TODO Auto-generated method stub
 		
 		object.update();
-		repaint();
+		
 		
 		
 		

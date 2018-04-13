@@ -27,7 +27,7 @@ public class GameObject {
 	public void jump ( ) {
 		
 		y -= velocity*60;
-		System.out.println("X");
+		
 		
 		
 		
@@ -35,19 +35,14 @@ public class GameObject {
 	 
 	
 	void update() {
+		
 		if (y< GameName.height - height) {
 			y+= velocity;
 			
 		}
 		
 		
-//		if (y>= 0) {
-//			y += velocity;
-//			velocity--;	
-//		}
-//		else {
-//			y=200;
-//			velocity=2;
+
 		}
 	
     void draw(Graphics g) {
